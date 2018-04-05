@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "4e508b75_cb300515",
+        "filename": "README.md",
+        "patchSetId": 1
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 1000044
+      },
+      "writtenOn": "2018-04-05T20:35:23Z",
+      "side": 1,
+      "message": "Whitespace galore. LOS be sloppy lately.",
+      "revId": "72d1b22eb4593ec76bb6cadb082a8084fadff736",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": false
+    }
+  ]
+}
