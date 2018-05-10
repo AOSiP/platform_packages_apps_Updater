@@ -16,6 +16,24 @@
       "revId": "b35aef29512069e14a72c02b81ca6286e65972e6",
       "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "217f4990_51558288",
+        "filename": "res/values/colors.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2018-05-10T03:41:49Z",
+      "side": 0,
+      "message": "not used anywhere afaik was something i added previous",
+      "parentUuid": "45f5170d_29634863",
+      "revId": "b35aef29512069e14a72c02b81ca6286e65972e6",
+      "serverId": "44769751-fbfc-497d-9c9a-4bb318a4117c",
+      "unresolved": false
     }
   ]
 }
