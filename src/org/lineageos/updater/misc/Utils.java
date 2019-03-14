@@ -94,12 +94,15 @@ public class Utils {
     }
 
     public static boolean isCompatible(UpdateBaseInfo update) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences();
+        boolean canSwitchBuildtype = preferences.getBoolean(Constants.PREF_SWITCH_BUILDTYPE, false);
         if (!SystemProperties.getBoolean(Constants.PROP_UPDATER_ALLOW_DOWNGRADING, false) &&
                 update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
             Log.d(TAG, update.getName() + " is older than/equal to the current build");
             return false;
         }
-        if (!update.getType().equalsIgnoreCase(SystemProperties.get(Constants.PROP_RELEASE_TYPE))) {
+        if (!canSwitchBuildtype &&
+                !update.getType().equalsIgnoreCase(SystemProperties.get(Constants.PROP_RELEASE_TYPE))) {
             Log.d(TAG, update.getName() + " has type " + update.getType());
             return false;
         }

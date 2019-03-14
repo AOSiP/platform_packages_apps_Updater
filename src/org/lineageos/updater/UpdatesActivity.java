@@ -414,6 +414,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         Switch autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
         Switch dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
         Switch abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
+        Switch switchBuildtype = view.findViewById(R.id.preferences_switch_buildtype);
 
         if (!Utils.isABDevice()) {
             abPerfMode.setVisibility(View.GONE);
@@ -424,6 +425,7 @@ public class UpdatesActivity extends UpdatesListActivity {
         autoDelete.setChecked(prefs.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false));
         dataWarning.setChecked(prefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true));
         abPerfMode.setChecked(prefs.getBoolean(Constants.PREF_AB_PERF_MODE, false));
+        switchBuildtype.setChecked(prefs.getBoolean(Constants.PREF_SWITCH_BUILDTYPE, false));
 
         new AlertDialog.Builder(this)
                 .setTitle(R.string.menu_preferences)
@@ -438,6 +440,8 @@ public class UpdatesActivity extends UpdatesListActivity {
                                     dataWarning.isChecked())
                             .putBoolean(Constants.PREF_AB_PERF_MODE,
                                     abPerfMode.isChecked())
+                            .putBoolean(Constants.PREF_SWITCH_BUILDTYPE,
+                                    switchBuildtype.isChecked())
                             .apply();
 
                     if (autoCheck.isChecked()) {
