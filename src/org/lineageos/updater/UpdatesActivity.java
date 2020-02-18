@@ -422,7 +422,6 @@ public class UpdatesActivity extends UpdatesListActivity {
         final Switch autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
         final Switch dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
         final Button updaterChannel = view.findViewById(R.id.preferences_custom_updater_uri);
-        Switch dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         autoCheckInterval.setSelection(Utils.getUpdateCheckSetting(this));
